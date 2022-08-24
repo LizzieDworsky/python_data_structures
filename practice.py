@@ -1,3 +1,6 @@
+#properties of data structures: chageability, orderability, and duplication
+#data structure types list, dictionary, set, tuple
+
 #sets
 my_superpowers = {"flight", "invisibility", "super strength"}
 print(my_superpowers)
@@ -47,4 +50,22 @@ print(more_flavors)
 del more_flavors
 
 flavor_count = len(favorite_ice_creams)
-print(f"I ahve {flavor_count} flavors of ice cream.")
+print(f"I have {flavor_count} flavors of ice cream.")
+
+
+# data structure conversions
+# tuple and set - unchangeable
+
+my_unchangeable_tuple = ("red", "white", "green")
+my_converted_tuple = list(my_unchangeable_tuple)
+my_converted_tuple[0] = "blue"
+my_unchangeable_tuple = tuple(my_converted_tuple)
+print(my_unchangeable_tuple)
+
+#sets don't allow duplicates
+snack_favorties = ["banana", "popcorn", "popcorn", "candy bar", "veggies and hummus"]
+remove_dupli_snacks = set(snack_favorties)
+snack_favorties = list(remove_dupli_snacks)
+# alternative
+# snack_favorites = list(set(snack_favorties))
+print(snack_favorties)
