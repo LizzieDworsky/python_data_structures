@@ -18,3 +18,17 @@ soda_machine = {
     },
     "accepts_credit_card": True
 }
+
+print(soda_machine["cans"][0]["type"])
+print(soda_machine["cans"][0]["cost"])
+soda_machine["cans"][0]["cost"] += 0.10
+print(soda_machine["cans"][0]["cost"])
+
+for soda in soda_machine["cans"]:
+    print(f"{soda['type']} - ${soda['cost']}")
+
+soda_machine["coins"]["quarters"] += 2
+soda_machine["accepts_credit_card"] = False
+
+print(soda_machine)
+
