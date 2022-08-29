@@ -20,10 +20,19 @@ Example Input: 22
 Example Output: "22 is a Sad Number :("
 """
 
+def happy_number_checker(potential_happy_number):
+    try:
+        int(potential_happy_number)
+        new_number = 0
+        while new_number != 1 or new_number != potential_happy_number:
+            split_numbers = []
+            
 
-def happy_number_checker():
-    pass
+    except ValueError:
+        print(f"{potential_happy_number}, didn't work. Please try again:")
+        happy_number_checker(input("Enter your new number here: "))
 
+happy_number_checker(input("Enter a number to see if it is Happy: "))
 
 # Problem 2 - Prime Numbers
 
